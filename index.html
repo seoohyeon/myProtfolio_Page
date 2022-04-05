@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+  />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=Noto+Sans+KR:wght@400;700;900&amp;display=swap">
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(function(){
+            var menu = $('.nav > li');
+            var contents = $('#wrap > div');  
+
+            $('.nav> li').click(function(event){
+                event.preventDefault();
+                
+                var tg = $(this);
+                var i = tg.index();
+                
+                var section = $('#wrap > div').eq(i);
+                var tt = section.offset().top;
+                
+                $('html, body').stop().animate({scrollTop:tt});
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 메인 -->
+        <div id="main">
+            <div class="in_main">
+                <div class="header">
+                    <h1 class="logo"><a href="/">SeoHyoen's Portfolio</a></h1>
+                    <ul class="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="main_title">
+                    <h1>Hi ! <br> 프론트엔드 개발자 <br> 김서현입니다</h1>
+                    <p> 배움의 재미와 디버깅의 뿌듯함을 동력으로 매일매일 자라나는 개발자입니다 <br>
+                    새로운 공부에 흥미를 느끼고 하나에 꽂히면 끝까지 파고드는 성격이 저의 강점입니다</p>
+                </div>
+            </div>
+        </div>
+        <!-- 소개 -->
+        <div id="profile">
+            <h1 class="content_title">&nbsp; #About &nbsp;</h1>
+            <div class="in_profile">
+                <div class="icon1">
+                    <div class="icon">
+                        <i class="fa solid fa-user"></i>
+                        <div class="icon-name">
+                            <div>이름</div>
+                            <div>김서현</div>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <i class="fa solid fa-calendar"></i>
+                        <div class="icon-birth">
+                            <div>생년월일</div>
+                            <div>1997. 09. 10</div>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <i class="fa solid fa-location-arrow"></i>
+                        <div class="icon-map">
+                            <div>주소지</div>
+                            <div>부산 해운대구</div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="icon2">
+                    <div class="icon">
+                        <i class="fa solid fa-phone"></i>
+                        <div class="icon-call">
+                            <div>연락처</div>
+                            <div>010-9644-6115</div>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <i class="fa solid fa-envelope"></i>
+                        <div class="icon-email">
+                            <div>이메일</div>
+                            <div>fltk0825@naver.com</div>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <i class="fa solid fa-graduation-cap"></i>
+                        <div class="icon-school">
+                            <div>학력</div>
+                            <div>부산대학교<br> 정보컴퓨터공학</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 스킬 -->
+        <div id="skill">
+            <div class="in_skill">
+                <h1 class="content_title">&nbsp; #Skills &nbsp;</h1>
+            </div>
+        </div>
+        <!-- 프로젝트 -->
+        <div id="project1">
+            <div class="in_project1">
+                <h1 class="content_title">&nbsp; #Project &nbsp;</h1>
+            </div>
+        </div>
+        <!-- 마무리 -->
+        <div id="end">
+            <div class="in_end">
+                <h1 class="content_title">&nbsp; #Contact &nbsp;</h1>
+            </div>
+        </div>
+    </div>
+    <!-- 퀵메뉴 -->
+    <div id="q_mn">
+        <ul class="nav">
+            <li><a href="#">🌼 Home</a></li>
+            <li><a href="#">👩 About</a></li>
+            <li><a href="#">⛏🛠 Skills</a></li>
+            <li><a href="#">🎁 Project</a></li>
+            <li><a href="#">📞 Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            $(window).scroll(
+            function(){
+            var	windowTop =$(window).scrollTop()+300;
+            $("#q_mn").stop().animate({top:windowTop+"px" },500);
+            //$("#q_mn").stop().animate({속성:"속성값", 속성:"속성값" },1000);	
+                }
+            );
+        });
+    </script>
+    <script
+    src="https://kit.fontawesome.com/6478f529f2.js"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
