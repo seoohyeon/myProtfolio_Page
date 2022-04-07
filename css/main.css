@@ -36,7 +36,9 @@ body {
 #wrap {
   width: 100%;
 }
-#wrap > div {
+#wrap > div:nth-child(2),
+#wrap > div:nth-child(3),
+#wrap > div:nth-child(5) {
   width: 100%;
   height: 100vh;
 }
@@ -50,13 +52,27 @@ body {
   background-color: rgb(37, 37, 37);
 }
 #wrap > div:nth-child(4) {
-  background-color: rgb(58, 109, 166);
+  background-color: rgb(37,123,184);
 }
 #wrap > div:nth-child(5) {
-  background-color: #e9ecef;
+  background-color: #f9fbfc;
 }
-#wrap .in_main {
+#main .in_main {
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5) url('../images/home.png');
+  background-size: 150% 200vh;
+  background-repeat: no-repeat;
+  filter:grayscale(40%);
+}
+#main .in_main .bg{
+  background-color:rgba(0, 0, 0, 0.5); 
+  width:100%; 
+  height:100vh; 
+  position: absolute; 
+  z-index: -1; 
 }
 .header {
   position: fixed;
@@ -97,24 +113,29 @@ body {
   color: orange;
 }
 .main_title {
-  margin: 200px 0 0 50px;
-  width: 600px;
-  background-color: #fff;
-  font-family: "Black Han Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f8fafc;
+  font-family: "GongGothicMedium";
 }
 .main_title > h1 {
   font-size: 80px;
-  padding-bottom: 30px;
-}
-.main_title > p {
-  font-size: 30px;
+  padding-bottom: 90px;
 }
 
+.main_title > p {
+  font-size: 30px;
+  text-align: center;
+}
+
+/* content */
 h1.content_title {
   font-family: "Black Han Sans";
-  padding-top: 100px;
+  padding-top: 120px;
   color: #fff;
-  font-size: 70px;
+  font-size: 80px;
   text-shadow: 2px 2px 6px rgb(49, 49, 49);
   text-align: center;
 }
@@ -125,21 +146,22 @@ h1.content_title {
   text-shadow: 2px 2px 6px gray;
 }
 
+
 #profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "GongGothicMedium";
 }
 
 #profile .in_profile {
-  margin-top: 90px;
-  width: 1100px;
-  height: 510px;
+  margin-top: 80px;
+  width: 1000px;
+  height: 400px;
   background-color: #fff;
   border-radius: 40px;
   box-shadow: rgba(68, 68, 68, 0.2) 1rem 1rem 1rem 0px;
-  font-size: 20px;
+  font-family: "GongGothicMedium";
+  font-size: 21px;
   color: rgb(103, 104, 102);
   line-height: 40px;
   display: flex;
@@ -152,6 +174,7 @@ h1.content_title {
   transition: transform 0.7s;
 }
 #profile .icon1 {
+  margin-top: -40px;
   display: flex;
   justify-content: space-around;
 }
@@ -165,7 +188,7 @@ h1.content_title {
   transform: color 0.5s;
 }
 #profile .icon1 > .icon > i {
-  margin-top: 10px;
+  margin-top: 9px;
   width: 35px;
   height: 45px;
 }
@@ -184,24 +207,108 @@ h1.content_title {
   transform: color 0.5s;
 }
 #profile .icon2 > .icon > i {
-  margin-top: 10px;
+  margin-top: 9px;
   width: 40px;
   height: 45px;
+}
+#profile .icon2 > .icon > i.fa-phone {
+  transform: scaleX(-1);
+  margin-left: -20px;
+}
+#profile .icon2 > .icon > .icon-call {
+  margin-left: 15px;
 }
 #profile .icon2 > .icon > .icon-email {
   margin-left: 20px;
 }
-#profile .icon2 > .icon > .icon-email div:last-child {
-  font-size: 18px;
+#profile .icon2 > .icon > div > .icon2-div-2{
+  font-size:20px;
 }
 #profile .icon2 > .icon > .icon-school div:nth-child(1) {
   margin-bottom: 7px;
 }
-#profile .icon2 > .icon > .icon-school div:nth-child(2),
-#profile .icon2 > .icon > .icon-school div:nth-child(3) {
-  font-size: 19px;
-  line-height: 20px;
+#profile .icon2 > .icon > .icon-school div:nth-child(2){
+  line-height: 25px;
 }
+
+
+#skill .skill-list{
+  padding: 0 300px;
+  margin-top: 100px;
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center;
+}
+#skill .skill-list > li{text-align: center;}
+#skill .skill-list > li > div{ 
+  width: 50px; 
+  height: 300px; 
+  border: 3px solid rgb(187, 197, 39);
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: relative; 
+  overflow: hidden;
+}
+#skill .skill-list > li > div > .in-box{
+  width: 50px; 
+  height: 300px; 
+  background-color: rgb(187, 197, 39);
+  position:absolute; 
+  top: 300px; left: 0;
+} 
+#skill .skill-list > li h5{
+  margin-top: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+#project_1 .in_project_1{margin-top:50px; display: flex; justify-content: center; align-items: center;}
+#project_1 .list{ width: 1000px; display: flex; font-family: "GongGothicMedium";}
+#project_1 .list > li{width: 500px; height: 600px;
+                      border: 1px solid #000; box-sizing: border-box;
+                      } 
+#project_1 .output{ background:url(../screen.png) no-repeat 0 100px; 
+                    background-size: 100%;}
+#project_1 .output > div{width: 420px; height: 270px; 
+                         border: 1px solid #000; box-sizing: border-box;
+                         margin: 120px 0 0 39px;} 
+#project_1 .account {
+  padding-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    }
+
+                    #end{position: relative;}
+
+#end .in_end {
+  margin: 150px 220px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+#end .in_end a > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+}
+
+#end .footer {
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #3e3f3e;;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 #q_mn {
   position: absolute;

@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=Noto+Sans+KR:wght@400;700;900&amp;display=swap">
     <script src="./js/jquery.js"></script>
+    <script src="./js/app.js"></script>
     <script>
         $(function(){
             var menu = $('.nav > li');
@@ -36,21 +37,23 @@
     <div id="wrap">
         <!-- 메인 -->
         <div id="main">
+            <div class="header">
+                <h1 class="logo"><a href="/">SeoHyoen's Portfolio</a></h1>
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
             <div class="in_main">
-                <div class="header">
-                    <h1 class="logo"><a href="/">SeoHyoen's Portfolio</a></h1>
-                    <ul class="nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Skills</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
+                <div class="bg"></div>
                 <div class="main_title">
                     <h1>Hi ! <br> 프론트엔드 개발자 <br> 김서현입니다</h1>
-                    <p> 배움의 재미와 디버깅의 뿌듯함을 동력으로 매일매일 자라나는 개발자입니다 <br>
-                    새로운 공부에 흥미를 느끼고 하나에 꽂히면 끝까지 파고드는 성격이 저의 강점입니다</p>
+                    <p>
+                    완성도 높은 코드, 그리고 완성도 높은 UI를 추구합니다<br>
+                    매일 고뇌하는 개발자가 되도록 노력하겠습니다</p>
                 </div>
             </div>
         </div>
@@ -86,45 +89,150 @@
                         <i class="fa solid fa-phone"></i>
                         <div class="icon-call">
                             <div>연락처</div>
-                            <div>010-9644-6115</div>
+                            <div class="icon2-div-2">010-9644-6115</div>
                         </div>
                     </div>
                     <div class="icon">
                         <i class="fa solid fa-envelope"></i>
                         <div class="icon-email">
                             <div>이메일</div>
-                            <div>fltk0825@naver.com</div>
+                            <div class="icon2-div-2">fltk0825@naver.com</div>
                         </div>
                     </div>
                     <div class="icon">
                         <i class="fa solid fa-graduation-cap"></i>
                         <div class="icon-school">
                             <div>학력</div>
-                            <div>부산대학교<br> 정보컴퓨터공학</div>
+                            <div class="icon2-div-2">부산대학교<br> 정보컴퓨터공학</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- 스킬 -->
-        <div id="skill">
+        <div id="skill"> 
             <div class="in_skill">
                 <h1 class="content_title">&nbsp; #Skills &nbsp;</h1>
+                <ul class="skill-list">
+                    <li>
+                        <div>
+                            <div class="in-box in-box01">90%</div>
+                        </div>
+                        <h5>Html</h5>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="in-box in-box02">90%</div>
+                        </div>
+                        <h5>CSS</h5>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="in-box in-box03">60%</div>
+                        </div>
+                        <h5>JQuery</h5>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="in-box in-box04">80%</div>
+                        </div>
+                        <h5>JS</h5>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="in-box in-box05">40%</div>
+                        </div>
+                        <h5>Node.js</h5>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="in-box in-box06">50%</div>
+                        </div>
+                        <h5>React</h5>
+                    </li>
+                </ul>
             </div>
         </div>
+
         <!-- 프로젝트 -->
-        <div id="project1">
-            <div class="in_project1">
-                <h1 class="content_title">&nbsp; #Project &nbsp;</h1>
+        <div id="project_1">
+            <h1 class="content_title">&nbsp; #Project &nbsp;</h1>
+            <div class="in_project_1">
+               <ul class="list">
+                   <li class="output">
+                       <div><img src="./images/screen.png" width="100%" alt=""></div>
+                   </li>
+                   <li class="account">
+                       <h3>프로젝트명</h3>
+                       <p>작업기간</p>
+                       <p>작업요점</p>
+                       <p>사용기술</p>
+                       <a href="">코드보기</a>
+                       <a href="">결과물보기</a>
+                   </li>
+               </ul>
             </div>
+            <div class="in_project_1">
+                <ul class="list">
+                    <li class="output">
+                        <div><img src="./images/screen.png" width="100%" alt=""></div>
+                    </li>
+                    <li class="account">
+                        <h3>프로젝트명</h3>
+                        <p>작업기간</p>
+                        <p>작업요점</p>
+                        <p>사용기술</p>
+                        <a href="">코드보기</a>
+                        <a href="">결과물보기</a>
+                    </li>
+                </ul>
+             </div>
         </div>
+
         <!-- 마무리 -->
         <div id="end">
+            <h1 class="content_title">&nbsp; #Contact &nbsp;</h1>
             <div class="in_end">
-                <h1 class="content_title">&nbsp; #Contact &nbsp;</h1>
+                <a href="https://github.com/seoohyeon"><img class="github" src="./images/github.png" alt="#"></a>
+                <a href="https://blog.naver.com/fltk0825"><img class="naverblog" src="./images/naverblog.PNG" alt="#"></a>
+                <a href=""><img class="kakao" src="./images/kakao.PNG" alt="#"></a>
+                <a href="mailto:fltk0825@naver.com"><img class="email_png" src="./images/email.PNG" alt="#"></a>
+            </div>
+            <div class="footer">
+                <p>©Copyright 2022. Kim Seohyoen All Rights Reserved</p>
             </div>
         </div>
     </div>
+            
+            <script>
+                $(document).ready(function(){
+                    var scene01Num = 1;
+    
+                    $(window).scroll(function(){
+                        var scrollTop = $(document).scrollTop();
+                        if(scrollTop > 1300 && scene01Num == 1){
+                            scene01Num = 0;
+                            $('#skill .in-box01').stop().css({top:'300px'}).animate({top:'30px'},1000);
+                            $('#skill .in-box02').stop().css({top:'300px'}).animate({top:'30px'},1000);
+                            $('#skill .in-box03').stop().css({top:'300px'}).animate({top:'110px'},1000);
+                            $('#skill .in-box04').stop().css({top:'300px'}).animate({top:'55px'},1000);
+                            $('#skill .in-box05').stop().css({top:'300px'}).animate({top:'170px'},1000);
+                            $('#skill .in-box06').stop().css({top:'300px'}).animate({top:'140px'},1000);
+                        }else if(scrollTop < 1300 && scene01Num == 0){
+                            scene01Num = 1;
+                            $('#skill .in-box').stop().css({top:'150px'}).animate({top:'300px'},1000)
+                        }
+    
+                    });
+                });
+            </script>
+        </div>
+
+
+
+
+
+        
     <!-- 퀵메뉴 -->
     <div id="q_mn">
         <ul class="nav">
